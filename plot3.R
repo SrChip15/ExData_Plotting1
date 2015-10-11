@@ -1,0 +1,7 @@
+> png("/Users/.../plot3.png")
+> with(power, plot(Time3, Sub_metering_1, type="l", xlab="", ylab="Energy sub metering", main="Energy sub metering over 2 days"))
+> lines(power$Time3, power$Sub_metering_2, type="l", col="Red")
+> lines(power$Time3, power$Sub_metering_3, type="l", col="Blue")
+> legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=2.5, col=c("Black", "Red", "Blue"))
+> dev.off()
+> quartz()

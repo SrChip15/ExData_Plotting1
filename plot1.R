@@ -1,0 +1,11 @@
+> library(lattice)
+> power <- read.csv("power.csv")
+> head(power)
+> power$Time2 <- paste(power$Date, power$Time, sep=" ")
+> head(power)
+> power$Time3 <- strptime(power$Time2, "%d/%m/%y %H:%M:%S")
+> head(power)
+> png("/Users/.../plot1.png")
+> hist(power$Global_active_power, xlab="Global Active Power (kilowatts)", main="Global Active Power" , col="red")
+> dev.off()
+
